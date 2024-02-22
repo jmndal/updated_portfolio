@@ -1,0 +1,41 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Light Theme */
+  --bg-img: url("/static/assets/bg.png");
+  --text-color: #242424;
+  --loader-color: #303030;
+}
+
+.light {
+  /* Dark Theme */
+  --bg-img: url("/static/assets/bg-1.png");
+  --text-color: #FFE2EF;
+  --loader-color: #FAB2C0;
+}
+
+body {
+  background-image: var(--bg-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.rounded {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+}
+
+.pointed {
+  width: 7px;
+  height: 7px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
