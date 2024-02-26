@@ -1,5 +1,4 @@
 var icon = document.querySelector(".toggle-btn");
-
 var jma = document.querySelector(".header-icon");
 
 var ig = document.querySelector(".instagram-icon");
@@ -7,6 +6,8 @@ var x = document.querySelector(".twitter-icon");
 var fb = document.querySelector(".facebook-icon");
 var li = document.querySelector(".linkedin-icon");
 var gh = document.querySelector(".github-icon");
+
+var cursor = document.querySelector(".rounded");
 
 var iconLight = `<svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M2 12C2 6.47715 6.47715 2 12 2C12.4627 2 12.5392 2.69347 12.1432 2.93276C10.2594 4.07105 9 6.13845 9 8.5C9 12.0899 11.9101 15 15.5 15C17.8615 15 19.9289 13.7406 21.0672 11.8568C21.3065 11.4608 22 11.5373 22 12C22 13.1377 21.81 14.231 21.46 15.25H22C22.4142 15.25 22.75 15.5858 22.75 16C22.75 16.4142 22.4142 16.75 22 16.75H2C1.58579 16.75 1.25 16.4142 1.25 16C1.25 15.5858 1.58579 15.25 2 15.25H2.53998C2.18999 14.231 2 13.1377 2 12Z" fill="#242424"></path> <path d="M5 18.25C4.58579 18.25 4.25 18.5858 4.25 19C4.25 19.4142 4.58579 19.75 5 19.75H19C19.4142 19.75 19.75 19.4142 19.75 19C19.75 18.5858 19.4142 18.25 19 18.25H5Z" fill="#242424"></path> <path d="M8 21.25C7.58579 21.25 7.25 21.5858 7.25 22C7.25 22.4142 7.58579 22.75 8 22.75H16C16.4142 22.75 16.75 22.4142 16.75 22C16.75 21.5858 16.4142 21.25 16 21.25H8Z" fill="#242424"></path> <path d="M19.9001 2.30719C19.7392 1.8976 19.1616 1.8976 19.0007 2.30719L18.5703 3.40247C18.5212 3.52752 18.4226 3.62651 18.298 3.67583L17.2067 4.1078C16.7986 4.26934 16.7986 4.849 17.2067 5.01054L18.298 5.44252C18.4226 5.49184 18.5212 5.59082 18.5703 5.71587L19.0007 6.81115C19.1616 7.22074 19.7392 7.22074 19.9001 6.81116L20.3305 5.71587C20.3796 5.59082 20.4782 5.49184 20.6028 5.44252L21.6941 5.01054C22.1022 4.849 22.1022 4.26934 21.6941 4.1078L20.6028 3.67583C20.4782 3.62651 20.3796 3.52752 20.3305 3.40247L19.9001 2.30719Z" fill="#242424"></path> <path d="M16.0328 8.12967C15.8718 7.72009 15.2943 7.72009 15.1333 8.12967L14.9764 8.52902C14.9273 8.65407 14.8287 8.75305 14.7041 8.80237L14.3062 8.95987C13.8981 9.12141 13.8981 9.70107 14.3062 9.86261L14.7041 10.0201C14.8287 10.0694 14.9273 10.1684 14.9764 10.2935L15.1333 10.6928C15.2943 11.1024 15.8718 11.1024 16.0328 10.6928L16.1897 10.2935C16.2388 10.1684 16.3374 10.0694 16.462 10.0201L16.8599 9.86261C17.268 9.70107 17.268 9.12141 16.8599 8.95987L16.462 8.80237C16.3374 8.75305 16.2388 8.65407 16.1897 8.52902L16.0328 8.12967Z" fill="#242424"></path> </g></svg>`;
 var jmaLight = `/static/assets/ribbon-blk.png`;
@@ -26,6 +27,9 @@ var fbDark = `<svg width="24px" height="24px" fill="#FFA7B8" version="1.1" xmlns
 var liDark = `<svg width="24px" height="24px" fill="#FFA7B8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <g id="7935ec95c421cee6d86eb22ecd125aef"> <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;" d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z"> </path> </g> </g> </svg>`;
 var ghDark = `<svg width="24px" height="24px" viewBox="0 0 48 48" fill="#FFA7B8" xmlns="http://www.w3.org/2000/svg" stroke="#FFA7B8"> <g id="SVGRepo_bgCarrier" stroke-width="0"></g> <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g> <g id="SVGRepo_iconCarrier"> <circle cx="24" cy="24" r="20" fill="#FFA7B8"></circle> <path d="M6.81348 34.235C9.24811 38.3138 13.0939 41.4526 17.6772 42.9784C18.6779 43.1614 19.0425 42.5438 19.0425 42.0134C19.0425 41.7938 19.0388 41.4058 19.0339 40.8866C19.0282 40.2852 19.0208 39.5079 19.0155 38.6124C13.4524 39.8206 12.2787 35.931 12.2787 35.931C11.3689 33.6215 10.0576 33.0064 10.0576 33.0064C8.2417 31.7651 10.1951 31.7896 10.1951 31.7896C12.2025 31.9321 13.2584 33.8511 13.2584 33.8511C15.0424 36.9071 17.94 36.0243 19.0794 35.5135C19.2611 34.2207 19.7767 33.3391 20.3489 32.8394C15.908 32.3348 11.2387 30.6183 11.2387 22.9545C11.2387 20.7715 12.0184 18.9863 13.2977 17.5879C13.0914 17.082 12.4051 15.0488 13.4929 12.2949C13.4929 12.2949 15.1725 11.7571 18.9934 14.3453C20.5883 13.9021 22.2998 13.6798 24.0003 13.6725C25.6983 13.6798 27.4099 13.9021 29.0072 14.3453C32.8256 11.7571 34.5016 12.2949 34.5016 12.2949C35.5931 15.0488 34.9067 17.082 34.7005 17.5879C35.9823 18.9863 36.757 20.7715 36.757 22.9545C36.757 30.638 32.0804 32.3286 27.6247 32.8234C28.343 33.441 28.9827 34.6614 28.9827 36.5277C28.9827 38.3152 28.9717 39.8722 28.9644 40.9035C28.9608 41.4143 28.9581 41.7962 28.9581 42.0134C28.9581 42.5487 29.3178 43.1712 30.3332 42.976C33.9844 41.7572 37.1671 39.5154 39.5403 36.5903C35.8734 41.1108 30.274 44 23.9997 44C16.6943 44 10.3038 40.0832 6.81348 34.235Z" fill="white"></path> </g> </svg>`;
 
+var bLight = `<img src="/static/assets/butterfly-dark.svg" alt="">`;
+var bDark = `<img src="/static/assets/butterfly-light.svg" alt="">`;
+
 const enableDarkMode = localStorage.getItem("isDarkMode");
 if (enableDarkMode === "false") {
   document.body.classList.add("light");
@@ -37,6 +41,8 @@ if (enableDarkMode === "false") {
   fb.innerHTML = fbDark;
   li.innerHTML = liDark;
   gh.innerHTML = ghDark;
+
+  cursor.innerHTML = bDark;
 } else {
   document.body.classList.remove("light");
   icon.innerHTML = iconLight;
@@ -47,6 +53,8 @@ if (enableDarkMode === "false") {
   fb.innerHTML = fbLight;
   li.innerHTML = liLight;
   gh.innerHTML = ghLight;
+
+  cursor.innerHTML = bLight;
 }
 
 function portMode() {
@@ -62,6 +70,8 @@ function portMode() {
     li.innerHTML = liDark;
     gh.innerHTML = ghDark;
 
+    cursor.innerHTML = bDark;
+
     localStorage.setItem("isDarkMode", false);
   } else {
     icon.innerHTML = iconLight;
@@ -72,6 +82,8 @@ function portMode() {
     fb.innerHTML = fbLight;
     li.innerHTML = liLight;
     gh.innerHTML = ghLight;
+
+    cursor.innerHTML = bLight;
     
     localStorage.setItem("isDarkMode", true);
   }

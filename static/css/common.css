@@ -7,6 +7,7 @@
 :root {
   /* Light Theme */
   --bg-img: url("/static/assets/bg.png");
+  --flower: url('/static/assets/flower-light.svg') no-repeat center/contain;
   --text-color: #242424;
   --loader-color: #303030;
 }
@@ -14,6 +15,7 @@
 .light {
   /* Dark Theme */
   --bg-img: url("/static/assets/bg-1.png");
+  --flower: url('/static/assets/flower-dark.svg') no-repeat center/contain;
   --text-color: #FFE2EF;
   --loader-color: #FAB2C0;
 }
@@ -29,13 +31,22 @@ body {
 .rounded {
   width: 30px;
   height: 30px;
-  border: 2px solid var(--text-color);
-  border-radius: 50%;
+  /* border: 2px solid var(--text-color); */
+  /* border-radius: 50%; */
 }
 
 .pointed {
-  width: 7px;
-  height: 7px;
+  width: 2px;
+  height: 2px;
   background-color: var(--text-color);
   border-radius: 50%;
+}
+
+.flower {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url('/static/assets/daisy-svgrepo-com.svg') no-repeat center/contain;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
