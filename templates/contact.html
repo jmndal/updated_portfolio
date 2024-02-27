@@ -9,22 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="/static/css/dashboard.css">
   <link rel="stylesheet" href="/static/css/common.css">
-  <title>Home | JM</title>
+  <link rel="stylesheet" href="/static/css/contact.css">
+  <title>Contact | JM</title>
 </head>
 
 <body>
   <div class="cursor rounded"></div>
   <div class="cursor pointed"></div>
-  
+
   <div class="container">
     <div class="header-wrapper animate__animated animate__zoomIn animate__faster">
       <header class="header-contents">
-        <a href="/templates/dashboard.html"><img src="/static/assets/JMA-2nd.png" alt="JMA Logo" class="header-icon"></a>
+        <a href="/templates/dashboard.html"><img src="/static/assets/JMA-2nd.png" alt="JMA Logo"
+            class="header-icon"></a>
         <div class="header-text">
           <ul class="header-ul">
             <li><a href="/templates/aboutme.html">About</a></li>
             <li><a href="/templates/projects.html">Projects</a></li>
-            <li><a href="/templates/contact.html">Contact</a></li>
             <li class="toggle-btn" onclick="portMode()">
               <!-- Append svg icon/s here -->
             </li>
@@ -35,18 +36,10 @@
 
     <div class="main-wrapper animate__animated animate__zoomIn animate__faster">
       <div class="main-contents">
-        <h1 class="greeting-h1">JOAN ANDAL</h1>
-        <p>I'm a software developer who enjoys designing efficient, user-friendly apps. In my professional life, I enjoy
-          the difficulties of designing, maintaining, testing, and debugging both the frontend and backend of applications and
-          systems. Aside from work, I have a profound appreciation for the rich storytelling and mesmerizing creativity
-          found in manhwa, manga, and manhua, which frequently inspire my creative approach to problem solving.</p>
-        <p>Furthermore, I enjoy discovering the wide and bright worlds of anime and K-dramas, which provide not only
-          amusement but also a source of inspiration for my personal and professional development.
-          I believe that my numerous interests and activities strengthen my viewpoint as a developer, 
-          enabling me to approach tasks in a unique and creative mindset.</p>
+        <input type="text" name="name" id="name_text" placeholder="Name" required>
+        <input type="email" name="email" id="email_text" placeholder="Email" required>
+        <textarea name="message" id="message_text" cols="30" rows="10" placeholder="Message"></textarea>
       </div>
-
-      <div class="loader"></div>
 
       <div class="footer-socials">
         <a href="https://www.instagram.com/joanaaang?igsh=YXQ1ZW52aDY1Y3hj" target="_blank" class="instagram-icon"></a>
@@ -57,7 +50,8 @@
       </div>
     </div>
   </div>
- </body>
+</body>
 <script src="/static/js/common.js"></script>
 <script src="/static/js/dashboard.js"></script>
+
 </html>

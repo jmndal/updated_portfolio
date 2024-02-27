@@ -58,7 +58,7 @@ if (enableDarkMode === "false") {
 }
 
 function portMode() {
-  window.location.reload();
+  // window.location.reload();
   document.body.classList.toggle("light");
   if (document.body.classList.contains("light")) {
     icon.innerHTML = iconDark;
