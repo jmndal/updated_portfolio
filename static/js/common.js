@@ -5,16 +5,12 @@ const moveCursor = (e) => {
   const mouseY = e.clientY;
   const mouseX = e.clientX;
 
-  console.log("mouseX: " + mouseX);
-  console.log("mouseY: " + mouseY);
-
   cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 
   cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 };
 
 window.addEventListener("mousemove", moveCursor);
-
 
 function addFlower(event) {
   const numFlowers = 6;
