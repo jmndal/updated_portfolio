@@ -17,7 +17,7 @@ window.addEventListener("mousemove", moveCursor);
 
 
 function addFlower(event) {
-  const numFlowers = 10;
+  const numFlowers = 6;
   const spread = 200;
 
   for (let i = 0; i < numFlowers; i++) {
