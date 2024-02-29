@@ -1,5 +1,5 @@
 input {
-  background: transparent;
+  background: #00000030;
   border: 0.1px solid #ec98be29;
   outline-width: 0;
   height: 50px;
@@ -18,7 +18,7 @@ input:focus {
 }
 
 textarea {
-  background: transparent;
+  background: #00000030;
   border: 0.1px solid #ec98be29;
   outline-width: 0;
   padding: 1rem;
@@ -47,4 +47,17 @@ button {
   border: none;
   border-radius: 5px;
   color: var(--input-color);
+  font-size: 16px;
+}
+
+.main-wrapper {
+  align-items: center !important;
+}
+
+.main-contents {
+  gap: 1rem !important;
+}
+
+.footer-socials {
+  justify-content: center !important;
 }
