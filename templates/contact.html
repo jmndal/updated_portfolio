@@ -36,9 +36,12 @@
 
     <div class="main-wrapper animate__animated animate__zoomIn animate__faster">
       <div class="main-contents">
-        <input type="text" name="name" id="name_text" placeholder="Name" required>
-        <input type="email" name="email" id="email_text" placeholder="Email" required>
-        <textarea name="message" id="message_text" cols="56" rows="10" placeholder="Message"></textarea>
+        <label for="name_text">Name<span>*</span></label>
+        <input type="text" name="name" id="name_text" placeholder="Please type your name..." required>
+        <label for="email_text">Email<span>*</span></label>
+        <input type="email" name="email" id="email_text" placeholder="Please type your email..." required>
+        <label for="message_text">Message<span>*</span></label>
+        <textarea name="message" id="message_text" cols="56" rows="10" placeholder="Please type your message..."></textarea>
         <button onclick="message()">Send Message</button>
       </div>
 
