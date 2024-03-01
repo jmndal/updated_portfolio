@@ -1,3 +1,9 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 input {
   background: #00000030;
   border: 0.1px solid #ec98be29;
@@ -6,6 +12,7 @@ input {
   width: 500px;
   padding: 1rem;
   color: var(--text-color);
+  border-radius: 5px;
 }
 
 input:focus {
@@ -15,6 +22,7 @@ input:focus {
   width: 500px;
   padding: 1rem;
   color: var(--input-color);
+  border-radius: 5px;
 }
 
 textarea {
@@ -23,6 +31,7 @@ textarea {
   outline-width: 0;
   padding: 1rem;
   color: var(--text-color);
+  border-radius: 5px;
 }
 
 textarea:focus {
@@ -30,6 +39,7 @@ textarea:focus {
   outline-width: 0;
   padding: 1rem;
   color: var(--input-color);
+  border-radius: 5px;
 }
 
 ::placeholder {

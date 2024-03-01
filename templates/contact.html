@@ -36,13 +36,18 @@
 
     <div class="main-wrapper animate__animated animate__zoomIn animate__faster">
       <div class="main-contents">
-        <label for="name_text">Name<span>*</span></label>
-        <input type="text" name="name" id="name_text" placeholder="Please type your name..." required>
-        <label for="email_text">Email<span>*</span></label>
-        <input type="email" name="email" id="email_text" placeholder="Please type your email..." required>
-        <label for="message_text">Message<span>*</span></label>
-        <textarea name="message" id="message_text" cols="56" rows="10" placeholder="Please type your message..."></textarea>
-        <button onclick="message()">Send Message</button>
+        <form action="http://localhost:8555/submit/" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Please type your name..." required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Please type your email..." required>
+        
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" cols="56" rows="10" placeholder="Please type your message..." required></textarea>
+        
+          <button type="submit">Send Message</button>
+        </form>
       </div>
 
       <div class="footer-socials">
